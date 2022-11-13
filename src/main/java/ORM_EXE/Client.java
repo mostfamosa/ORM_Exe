@@ -13,12 +13,10 @@ public class Client {
             Statement stmt = con.createStatement();
             //stmt.executeUpdate("CREATE TABLE AgentDetail (idNo INT(64) NOT NULL AUTO_INCREMENT, initials VARCHAR(2),agentDate DATE, agentCount INT(64),PRIMARY KEY (`idNo`));");
             //stmt.executeUpdate("DROP TABLE AgentDetail;");
+
+            con.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
-
-
     }
 }
