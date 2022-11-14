@@ -1,5 +1,4 @@
 package ORM_EXE;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,10 +10,12 @@ public class Client {
         try {
             Connection con = mysqlcon.getConnection();
             Statement stmt = con.createStatement();
-            //stmt.executeUpdate("CREATE TABLE AgentDetail (idNo INT(64) NOT NULL AUTO_INCREMENT, initials VARCHAR(2),agentDate DATE, agentCount INT(64),PRIMARY KEY (`idNo`));");
-            //stmt.executeUpdate("DROP TABLE AgentDetail;");
 
-            con.close();
+            //stmt.executeUpdate("DROP TABLE User;");
+            CreateTable<User> createTable= new CreateTable<>(User.class);
+            createTable.createTableInDB();
+
+            mysqlcon.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
