@@ -18,6 +18,19 @@ public class Client {
 
             User user1 = new User(6, "Rivka", 50, 24, 'A', LocalDate.of(1998, 2, 22), false);
             update.updateItem(user1);
+            //Creating table example:
+            /*
+            CreateTable<User> createTable= new CreateTable<>(User.class);
+            createTable.createTableInDB();
+            */
+
+            //Delete examples:
+            /*
+            Delete<User> delete = new Delete<>(User.class);
+            delete.deleteTable();
+            delete.deleteAllRecordsByProperty("name","Carol");
+            delete.deleteOneRecordByProperty("name","marol");
+            */
 
             con.close();
         } catch (SQLException e) {
