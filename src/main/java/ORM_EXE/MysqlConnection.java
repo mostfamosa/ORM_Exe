@@ -32,4 +32,14 @@ public class MysqlConnection {
     public Connection getConnection() {
         return connection;
     }
+
+    public void close(){
+        try {
+            this.connection.close();
+            instance = null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }
