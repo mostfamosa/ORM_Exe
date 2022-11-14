@@ -8,8 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static ORM_EXE.Add.MYSQL_DUPLICATE_PK;
-
 public class Update<T> {
     private Class<T> clz;
     MysqlConnection mysqlConnection;
@@ -21,7 +19,7 @@ public class Update<T> {
 
     public void updateField(String field, T updatedValue, int id) {
         try {
-            String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase()  + " SET " + field + " = ? " + "WHERE id =" + id;
+            String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET " + field + " = ? " + "WHERE id =" + id;
             PreparedStatement ps = mysqlConnection.getConnection().prepareStatement(sqlUpdate);
             if (updatedValue.getClass().getSimpleName().equals("Character")) {
                 ps.setString(1, String.valueOf(updatedValue));
@@ -33,19 +31,20 @@ public class Update<T> {
             throw new RuntimeException(e);
         }
     }
+
     public void updateItem(T item) {
         try {
             Statement stmt = mysqlConnection.getConnection().createStatement();
             Field[] allFields = clz.getDeclaredFields();
             String insertCommand = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET ";
             Integer id = null;
-            for (int i=0; i<allFields.length; i++) {
+            for (int i = 0; i < allFields.length; i++) {
                 allFields[i].setAccessible(true);
                 String name = allFields[i].getName().substring(allFields[i].getName().lastIndexOf('.') + 1);
                 if (name.equals("id")) {
                     id = (Integer) allFields[i].get(item);
                 } else {
-                    insertCommand += " " +name + " = " + "?";
+                    insertCommand += " " + name + " = " + "?";
                     if (i != allFields.length - 1) {
                         insertCommand += ", ";
                     }
@@ -55,8 +54,8 @@ public class Update<T> {
             insertCommand += " WHERE id = " + id;
             System.out.println(insertCommand);
             PreparedStatement ps = mysqlConnection.getConnection().prepareStatement(insertCommand);
-            int index=1;
-            for (int i=0;i<allFields.length&&index<allFields.length; i++) {
+            int index = 1;
+            for (int i = 0; i < allFields.length && index < allFields.length; i++) {
                 allFields[i].setAccessible(true);
                 Object value = null;
                 value = allFields[i].get(item);
@@ -77,10 +76,7 @@ public class Update<T> {
             }
             ps.execute();
         } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
-            if (e.getErrorCode() == MYSQL_DUPLICATE_PK) {
-                throw new RuntimeException("Primary key already used");
-            } else throw new RuntimeException(e);
+            throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         }
