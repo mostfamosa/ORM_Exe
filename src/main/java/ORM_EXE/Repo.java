@@ -1,5 +1,2 @@
-package ORM_EXE;
-
-public class Repo {
-
+package ORM_EXE;public class Repo {
 }
