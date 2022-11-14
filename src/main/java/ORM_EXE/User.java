@@ -10,9 +10,9 @@ public class User {
     private char grade;
     private LocalDate birthDate;
     private Boolean employed;
-    private Item item;
+ //   private Item item;
 
-    public User(int id, String name, double weight, int age, char grade, LocalDate birthDate, Boolean employed, Item item) {
+    public User(int id, String name, double weight, int age, char grade, LocalDate birthDate, Boolean employed) {
         this.id = id;
         this.name = name;
         this.weight = weight;
@@ -20,16 +20,16 @@ public class User {
         this.grade = grade;
         this.birthDate = birthDate;
         this.employed = employed;
-        this.item=item;
+       // this.item=item;
     }
 
-    public Item getItem() {
-        return item;
-    }
+//    public Item getItem() {
+//        return item;
+//    }
 
-    public void setItem(Item item) {
-        this.item = item;
-    }
+//    public void setItem(Item item) {
+//        this.item = item;
+//    }
 
     public int getId() {
         return id;

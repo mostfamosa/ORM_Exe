@@ -24,7 +24,7 @@ public class Add<T> {
         ResultSet rs = null;
         try {
             DatabaseMetaData md = mysqlConnection.getConnection().getMetaData();
-            rs = md.getTables(null, null, clz.getSimpleName().toLowerCase() + 's', null);
+            rs = md.getTables(null, null, clz.getSimpleName().toLowerCase() , null);
             if (rs.next()) {
                 return true;
             }
@@ -38,9 +38,12 @@ public class Add<T> {
     public <T> void addItem(T item) {
         try {
             Statement stmt = mysqlConnection.getConnection().createStatement();
-            if (checkIfTableExist()) {
+            if (!checkIfTableExist()) {
+                CreateTable createTable=new CreateTable(clz);
+                createTable.createTableInDB();
+            }
                 Field[] allFields = clz.getDeclaredFields();
-                String insertCommand = "INSERT INTO " + clz.getSimpleName().toLowerCase() + 's' + " VALUES(";
+                String insertCommand = "INSERT INTO " + clz.getSimpleName().toLowerCase() + " VALUES(";
                 for (int i = 0; i < allFields.length; i++) {
                     insertCommand += '?';
                     if (i != allFields.length - 1) {
@@ -68,12 +71,10 @@ public class Add<T> {
                     }
                 }
                 ps.execute();
-            } else {
-                throw new RuntimeException("no matching table exist");
-            }
+
 
         } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
+
             if (e.getErrorCode() == MYSQL_DUPLICATE_PK) {
                 throw new RuntimeException("Primary key already used");
             } else throw new RuntimeException(e);

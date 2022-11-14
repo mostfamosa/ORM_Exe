@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/MySqlTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/MysqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Repo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +56,14 @@
       <option name="presentableId" value="Default" />
       <updated>1668348461577</updated>
     </task>
+    <task id="LOCAL‎-00001" summary="add and update features">
+      <created>1668429467246</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL‎-00001" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1668429467246</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,13 +77,27 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add and update features" />
+    <option name="LAST_COMMIT_MESSAGE" value="add and update features" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java</url>
-          <line>55</line>
+          <line>58</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,11 +4,21 @@ public class Item {
     private int id;
     private String name;
     private String email;
+    private User user;
 
-    public Item(int id, String name, String email) {
+    public Item(int id, String name, String email, User user) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.user=user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getId() {
