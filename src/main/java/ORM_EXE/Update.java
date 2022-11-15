@@ -1,12 +1,14 @@
 package ORM_EXE;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.mysql.cj.MysqlType;
 
 import java.lang.reflect.Field;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 
 public class Update<T> {
     private Class<T> clz;
@@ -52,7 +54,6 @@ public class Update<T> {
 
             }
             insertCommand += " WHERE id = " + id;
-            System.out.println(insertCommand);
             PreparedStatement ps = mysqlConnection.getConnection().prepareStatement(insertCommand);
             int index = 1;
             for (int i = 0; i < allFields.length && index < allFields.length; i++) {
@@ -61,16 +62,16 @@ public class Update<T> {
                 value = allFields[i].get(item);
                 String name = allFields[i].getName().substring(allFields[i].getName().lastIndexOf('.') + 1);
                 if (!name.equals("id")) {
-                    if ((MysqlType) MySqlTypes.DEFAULT_MYSQL_TYPES.get(value.getClass()) == null) {
+                    if (allFields[i].getType().isPrimitive()) {
                         if (value.getClass().getSimpleName().equals("Character")) {
                             ps.setString(index++, String.valueOf(value));
                         } else {
-                            Gson gson = new Gson();
-                            String jsonObj = gson.toJson(value);
-                            ps.setString(index++, jsonObj);
+                            ps.setObject(index++, value);
                         }
                     } else {
-                        ps.setObject(index++, value);
+                        Gson gson = new Gson();
+                        String jsonObj = gson.toJson(value);
+                        ps.setString(index++, jsonObj);
                     }
                 }
             }
