@@ -1,7 +1,13 @@
 package ORM_EXE;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+<<<<<<< HEAD
+=======
+import java.time.LocalDate;
+import java.util.ArrayList;
+>>>>>>> main
 import java.util.List;
 
 public class Client {
@@ -10,22 +16,30 @@ public class Client {
         MysqlConnection mysqlcon = MysqlConnection.getInstance();
         try {
             Connection con = mysqlcon.getConnection();
-            Statement stmt = con.createStatement();
+            Add add = new Add(Item.class);
+            Update update=new Update(User.class);
 
             //stmt.executeUpdate("DROP TABLE User;");
            // CreateTable<User> createTable= new CreateTable<>(User.class);
             //createTable.createTableInDB();
 
-            mysqlcon.close();
+            //Creating table example:
+            /*
+            CreateTable<User> createTable= new CreateTable<>(User.class);
+            createTable.createTableInDB();
+            */
+
+            //Delete examples:
+            /*
+            Delete<User> delete = new Delete<>(User.class);
+            delete.deleteTable();
+            delete.deleteAllRecordsByProperty("name","Carol");
+            delete.deleteOneRecordByProperty("name","marol");
+            */
+
+            con.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
-//        List<User> users = userReadFromDB.getAllItems();
-//        users.forEach(user -> System.out.println(user));
-        System.out.println(userReadFromDB.getItemsByProp("weight","50"));
-
-
-
     }
 }

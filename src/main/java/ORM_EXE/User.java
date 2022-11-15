@@ -3,27 +3,33 @@ package ORM_EXE;
 import java.time.LocalDate;
 
 public class User {
-
-    @Primary_Key
-    @Auto_Increment
     private int id;
-
-    @Primary_Key
-    @Not_Null
-    @Unique
-    private String email;
-
-    @Not_Null
     private String name;
     private double weight;
     private int age;
     private char grade;
     private LocalDate birthDate;
-    private boolean employed;
+    private Boolean employed;
+ //   private Item item;
 
-    public User(){
-
+    public User(int id, String name, double weight, int age, char grade, LocalDate birthDate, Boolean employed) {
+        this.id = id;
+        this.name = name;
+        this.weight = weight;
+        this.age = age;
+        this.grade = grade;
+        this.birthDate = birthDate;
+        this.employed = employed;
+       // this.item=item;
     }
+
+//    public Item getItem() {
+//        return item;
+//    }
+
+//    public void setItem(Item item) {
+//        this.item = item;
+//    }
 
     public int getId() {
         return id;
@@ -31,14 +37,6 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getName() {
@@ -81,25 +79,11 @@ public class User {
         this.birthDate = birthDate;
     }
 
-    public boolean isEmployed() {
+    public Boolean getEmployed() {
         return employed;
     }
 
-    public void setEmployed(boolean employed) {
+    public void setEmployed(Boolean employed) {
         this.employed = employed;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", name='" + name + '\'' +
-                ", weight=" + weight +
-                ", age=" + age +
-                ", grade=" + grade +
-                ", birthDate=" + birthDate +
-                ", employed=" + employed +
-                '}';
     }
 }
