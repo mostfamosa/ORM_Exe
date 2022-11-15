@@ -34,9 +34,9 @@ public class Client {
 //        update.updateItem(user2);
 //        mysqlcon.close();
 //
-//        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
-//        List<User> users = userReadFromDB.getAllItems();
-//        users.forEach(user -> System.out.println(user.toString()));
+        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
+        List<User> users = userReadFromDB.getAllItems();
+        users.forEach(user -> System.out.println(user.toString()));
 
         /*delete object*/
 //        Delete<User> delete = new Delete<>(User.class);

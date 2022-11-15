@@ -38,7 +38,7 @@ public class Update<T> {
                 ps.setString(1, jsonObj);
             }
             ps.execute();
-            con.close();
+            mysqlcon.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -88,7 +88,7 @@ public class Update<T> {
                 }
             }
             ps.execute();
-            con.close();
+            mysqlcon.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {

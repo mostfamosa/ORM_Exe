@@ -1,0 +1,1 @@
+2022-11-15 11:49:47,468 INFO    ORM_EXE.ReadFromDB - info 400 : item added User{id=1, name='Rachel', weight=50.0, age=18, grade=A, birthDate=1996-12-25, employed=true}

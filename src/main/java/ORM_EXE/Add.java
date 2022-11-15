@@ -73,7 +73,7 @@ public class Add<T> {
                 }
             }
             ps.execute();
-            con.close();
+            mysqlcon.close();
         } catch (SQLException e) {
             if (e.getErrorCode() == MYSQL_DUPLICATE_PK) {
                 throw new RuntimeException("Primary key already used");

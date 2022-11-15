@@ -8,11 +8,14 @@ import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ReadFromDB<T> {
+    private static Logger logger = LogManager.getLogger(ReadFromDB.class.getName());
+
     private Class<T> clz;
     private MysqlConnection mysqlcon;
     private Connection con;
@@ -46,6 +49,7 @@ public class ReadFromDB<T> {
                     } else
                         field.set(item, res.getObject(field.getName()));
                 }
+                logger.info("info 400 : item added "+item);
                 result.add(item);
             }
             mysqlcon.close();
