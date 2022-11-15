@@ -1,8 +1,7 @@
-package ORM_EXE;
+package ORM_EXE.repository;
 
+import ORM_EXE.utils.Validator;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.mysql.cj.MysqlType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,19 +10,18 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
 
-public class Update<T> {
-    private static Logger logger = LogManager.getLogger(Update.class.getName());
+ class UpdateQuery<T> {
+    private static Logger logger = LogManager.getLogger(UpdateQuery.class.getName());
     private Class<T> clz;
     private MysqlConnection mysqlcon;
     private Connection con;
 
-    public Update(Class<T> clz) {
+    public UpdateQuery(Class<T> clz) {
         this.clz = clz;
     }
 
-    public void updateField(String field, T updatedValue, int id) {
+    public <T> void updateField(String field, T updatedValue, int id) {
 
         try {
             if (field == null || updatedValue == null || !Validator.isFieldExistsInTable(con, clz.getSimpleName().toLowerCase(), field)) {
@@ -54,7 +52,7 @@ public class Update<T> {
         }
     }
 
-    public void updateItem(T item) {
+    public <T> void updateItem(T item) {
         try {
             mysqlcon = MysqlConnection.getInstance();
             con = mysqlcon.getConnection();

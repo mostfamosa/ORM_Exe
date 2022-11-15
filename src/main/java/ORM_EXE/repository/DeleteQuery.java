@@ -1,16 +1,15 @@
-package ORM_EXE;
-import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
+package ORM_EXE.repository;
+import ORM_EXE.utils.Validator;
+
 import java.sql.SQLException;
 import java.util.regex.Pattern;
 
-public class Delete<T> {
+ class DeleteQuery<T> {
     private final Class<T> clz;
     private MysqlConnection con;
 
-    public Delete(Class<T> clz) {
+    public DeleteQuery(Class<T> clz) {
         this.clz = clz;
-        this.con = MysqlConnection.getInstance();
     }
 
     public int deleteTable(){

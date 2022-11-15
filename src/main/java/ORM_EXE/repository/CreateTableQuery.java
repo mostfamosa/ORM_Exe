@@ -1,15 +1,15 @@
-package ORM_EXE;
+package ORM_EXE.repository;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class CreateTable<T> {
+ class CreateTableQuery<T> {
     private final Class<T> clz;
     private MysqlConnection con;
 
-    public CreateTable(Class<T> clz) {
+    public CreateTableQuery(Class<T> clz) {
         this.clz = clz;
         con = MysqlConnection.getInstance();
     }

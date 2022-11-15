@@ -1,4 +1,4 @@
-package ORM_EXE;
+package ORM_EXE.repository;
 
 
 import com.google.gson.Gson;
@@ -13,14 +13,14 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ReadFromDB<T> {
-    private static Logger logger = LogManager.getLogger(ReadFromDB.class.getName());
+ class ReadQuery<T> {
+    private static Logger logger = LogManager.getLogger(ReadQuery.class.getName());
 
     private Class<T> clz;
     private MysqlConnection mysqlcon;
     private Connection con;
 
-    public ReadFromDB(Class<T> clz) {
+    public ReadQuery(Class<T> clz) {
         this.clz = clz;
     }
 

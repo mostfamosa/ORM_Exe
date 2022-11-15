@@ -1,4 +1,4 @@
-package ORM_EXE;
+package ORM_EXE.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

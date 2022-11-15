@@ -1,4 +1,4 @@
-package ORM_EXE;
+package ORM_EXE.utils;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;

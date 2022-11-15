@@ -1,18 +1,18 @@
 package ORM_EXE;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import ORM_EXE.entity.User;
+import ORM_EXE.repository.Repo;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
     public static void main(String[] args) {
 
-        MysqlConnection mysqlcon = MysqlConnection.getInstance();
-        Connection con = mysqlcon.getConnection();
 
+        Repo repo = new Repo<>(User.class);
+        User user = new User(2,"Daria",60,20,'B', LocalDate.of(1996,12,25),true);
+        repo.getAllItems();
         /*Create Table*/
 //        CreateTable<User> createTable = new CreateTable<>(User.class);
 //        createTable.createTableInDB();
@@ -34,13 +34,15 @@ public class Client {
 //        update.updateItem(user2);
 //        mysqlcon.close();
 //
-        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
-        List<User> users = userReadFromDB.getAllItems();
-        users.forEach(user -> System.out.println(user.toString()));
+//        ReadQuery<User> userReadQuery = new ReadQuery<>(User.class);
+//        List<User> users = userReadQuery.getAllItems();
+//        users.forEach(user -> System.out.println(user.toString()));
 
         /*delete object*/
 //        Delete<User> delete = new Delete<>(User.class);
 //        delete.deleteOneRecordByProperty("age","18");
+
+
 
     }
 }

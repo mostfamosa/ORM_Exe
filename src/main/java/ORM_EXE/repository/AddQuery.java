@@ -1,25 +1,23 @@
-package ORM_EXE;
+package ORM_EXE.repository;
 
 
+import ORM_EXE.utils.Validator;
 import com.google.gson.Gson;
-import com.mysql.cj.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Field;
 import java.sql.*;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class Add<T> {
-    private static Logger logger = LogManager.getLogger(Add.class.getName());
+public class AddQuery<T> {
+    private static Logger logger = LogManager.getLogger(AddQuery.class.getName());
     private Class<T> clz;
     private MysqlConnection mysqlcon;
     private Connection con;
     public static final int MYSQL_DUPLICATE_PK = 1062;
 
-    public Add(Class<T> clz) {
+    public AddQuery(Class<T> clz) {
         this.clz = clz;
     }
 
@@ -32,7 +30,7 @@ public class Add<T> {
                 mysqlcon = MysqlConnection.getInstance();
                 con = mysqlcon.getConnection();
                 if (!Validator.isTableExists(con, clz.getSimpleName().toLowerCase())) {
-                    CreateTable createTable = new CreateTable(clz);
+                    CreateTableQuery createTable = new CreateTableQuery(clz);
                     createTable.createTableInDB();
                 }
                 Field[] allFields = clz.getDeclaredFields();
@@ -79,7 +77,7 @@ public class Add<T> {
         }
     }
 
-    public <T> void addMultiple(List<T> items) {
+    public <T> void addMultipleItems(List<T> items) {
         if (items == null || items.size() == 0) {
             logger.warn("warn 200: failed to add empty list of items");
         } else {

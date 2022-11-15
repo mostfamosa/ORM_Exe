@@ -1,4 +1,4 @@
-package ORM_EXE;
+package ORM_EXE.entity;
 
 import java.time.LocalDate;
 

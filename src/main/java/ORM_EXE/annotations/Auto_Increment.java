@@ -1,4 +1,4 @@
-package ORM_EXE;
+package ORM_EXE.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Not_Null {
+public @interface Auto_Increment {
 
 }

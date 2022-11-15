@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Auto_Increment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/annotations/Auto_Increment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/ReadFromDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/ReadFromDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/CreateTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/DeleteQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/MysqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Not_Null.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/annotations/Not_Null.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Primary_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/annotations/Primary_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/ReadFromDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/ReadQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/Repo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Unique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/annotations/Unique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/utils/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +66,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/learning/Alpha Team Learning/StartAtGoogle/ORM_Exe/ORM_Exe/src/main",
+    "last_opened_file_path": "D:/learning/Alpha Team Learning/StartAtGoogle/ORM_Exe",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -77,7 +87,7 @@
       <module name="ORM_Exe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ORM_EXE.*" />
+          <option name="PATTERN" value="ORM_EXE.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,15 +125,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="e.cause" />

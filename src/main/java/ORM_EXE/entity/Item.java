@@ -1,4 +1,4 @@
-package ORM_EXE;
+package ORM_EXE.entity;
 
 public class Item {
     private int id;
