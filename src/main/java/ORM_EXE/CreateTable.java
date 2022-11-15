@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class CreateTable<T> {
     private final Class<T> clz;
-    private final MysqlConnection con;
+    private MysqlConnection con;
 
     public CreateTable(Class<T> clz) {
         this.clz = clz;
@@ -62,12 +62,13 @@ public class CreateTable<T> {
         queryStr.append(");");
 
         try {
+            con = MysqlConnection.getInstance();
             Statement statement = con.getConnection().createStatement();
             statement.executeUpdate(queryStr.toString());
+            con.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-
-
+    
 }
