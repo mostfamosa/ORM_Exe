@@ -26,3 +26,50 @@
 2022-11-15 15:40:38,711 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
 2022-11-15 15:40:56,465 ERROR   ORM_EXE.repository.UpdateQuery - error 200: failed to update item User at fieldname set value to Rachel
 2022-11-15 15:41:10,587 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 16:00:54,979 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=10, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 16:02:14,360 ERROR   ORM_EXE.repository.AddQuery - error 200: failed to add item ORM_EXE.entity.Item@38600b
+2022-11-15 16:03:29,382 INFO    ORM_EXE.repository.AddQuery - info 400 : item added ORM_EXE.entity.Item@53dfacba
+2022-11-15 16:05:05,123 ERROR   ORM_EXE.repository.AddQuery - error 200: failed to add item ORM_EXE.entity.Item@5c089b2f
+2022-11-15 16:07:39,397 ERROR   ORM_EXE.repository.AddQuery - error 200: failed to add item ORM_EXE.entity.Item@5eccd3b9
+2022-11-15 16:09:35,847 ERROR   ORM_EXE.repository.AddQuery - error 200: failed to add item ORM_EXE.entity.Item@4d6f197e
+2022-11-15 16:11:18,244 INFO    ORM_EXE.repository.AddQuery - info 400 : item added ORM_EXE.entity.Item@3935e9a8
+2022-11-15 16:14:56,960 INFO    ORM_EXE.repository.AddQuery - info 400 : item added ORM_EXE.entity.Item@aced190
+2022-11-15 16:16:34,543 INFO    ORM_EXE.repository.AddQuery - info 400 : item added ORM_EXE.entity.Item@aced190
+2022-11-15 16:17:59,391 INFO    ORM_EXE.repository.AddQuery - info 400 : item added ORM_EXE.entity.Item@288a4658
+2022-11-15 16:30:44,628 WARN    ORM_EXE.repository.AddQuery - warn 200: failed to add null item
+2022-11-15 17:02:03,279 INFO    ORM_EXE.repository.AddQuery - info 400 : item added ORM_EXE.entity.ItemWithPrimaryKey@697446d4
+2022-11-15 17:04:47,840 WARN    ORM_EXE.repository.AddQuery - warn 300: failed to add item with primary key that is already in use
+2022-11-15 17:15:22,951 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=12, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:22,986 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=13, name='Rachel', weight=50.0, age=20, grade=A, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,014 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=14, name='Mostafa', weight=50.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,043 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:15:23,044 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:15:23,045 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:15:23,047 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:15:23,048 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=7, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:15:23,049 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=2, name='Rachel', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,049 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,050 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=10, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,051 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=12, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,052 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=13, name='Rachel', weight=50.0, age=20, grade=A, birthDate=1996-12-25, employed=true}
+2022-11-15 17:15:23,053 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=14, name='Mostafa', weight=50.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:10,916 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=12, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:10,954 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=13, name='Rachel', weight=50.0, age=20, grade=A, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:10,983 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=14, name='Mostafa', weight=50.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,013 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:16:11,014 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:16:11,015 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:16:11,015 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:16:11,016 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=7, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 17:16:11,017 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=2, name='Rachel', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,018 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,018 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=10, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,019 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=12, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,020 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=13, name='Rachel', weight=50.0, age=20, grade=A, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,021 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=14, name='Mostafa', weight=50.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,022 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=12, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,023 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=13, name='Rachel', weight=50.0, age=20, grade=A, birthDate=1996-12-25, employed=true}
+2022-11-15 17:16:11,024 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=14, name='Mostafa', weight=50.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 17:19:54,260 WARN    ORM_EXE.repository.AddQuery - warn 200: failed to add null
+2022-11-15 17:20:12,679 WARN    ORM_EXE.repository.AddQuery - warn 200: failed to add empty list of items
+2022-11-15 17:21:18,428 WARN    ORM_EXE.repository.AddQuery - warn 200: failed to add empty list of items

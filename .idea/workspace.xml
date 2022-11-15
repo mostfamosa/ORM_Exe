@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="minor fix in update field">
-      <change afterPath="$PROJECT_DIR$/src/test/java/AddQueryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/ItemWithPrimaryKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddQueryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,24 +68,64 @@
       <recent name="D:\Git\ORM_Exe\src\main\java\ORM_EXE" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ORM_EXE.Client" />
+  <component name="RunManager" selected="JUnit.AddQueryTest.givenEmptyList_thenItemsNotAdded">
+    <configuration name="AddQueryTest.givenEmptyList_thenItemsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ORM_Exe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ORM_EXE.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
+      <option name="METHOD_NAME" value="givenEmptyList_thenItemsNotAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddQueryTest.givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ORM_Exe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
+      <option name="METHOD_NAME" value="givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddQueryTest.givenListOfItems_thenItemsAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ORM_Exe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
+      <option name="METHOD_NAME" value="givenListOfItems_thenItemsAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddQueryTest.givenNull_thenItemIsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ORM_Exe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
+      <option name="METHOD_NAME" value="givenNull_thenItemIsNotAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddQueryTest.givenNull_thenItemsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ORM_Exe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
+      <option name="METHOD_NAME" value="givenNull_thenItemsNotAdded" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Client" />
+        <item itemvalue="JUnit.AddQueryTest.givenEmptyList_thenItemsNotAdded" />
+        <item itemvalue="JUnit.AddQueryTest.givenNull_thenItemsNotAdded" />
+        <item itemvalue="JUnit.AddQueryTest.givenListOfItems_thenItemsAdded" />
+        <item itemvalue="JUnit.AddQueryTest.givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" />
+        <item itemvalue="JUnit.AddQueryTest.givenNull_thenItemIsNotAdded" />
       </list>
     </recent_temporary>
   </component>
@@ -118,6 +158,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java</url>
           <line>26</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
