@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ORM_EXE/repository/CreateTableQueryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ORM_EXE/repository/DeleteQueryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ORM_EXE/repository/MysqlConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ORM_EXE/repository/ValidatorTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_11_2022_15_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_11_2022_15_02__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/DeleteQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/DeleteQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/MysqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/Repo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Git/ORM_Exe",
+    "last_opened_file_path": "D:/Git/ORM_Exe/src/test/java/ORM_EXE/repository",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -64,6 +65,7 @@
       <recent name="ORM_EXE" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\ORM_Exe\src\test\java\ORM_EXE\repository" />
       <recent name="D:\learning\Alpha Team Learning\StartAtGoogle\ORM_Exe\ORM_Exe\src\main" />
       <recent name="D:\Git\ORM_Exe\src\main\java\ORM_EXE" />
     </key>
