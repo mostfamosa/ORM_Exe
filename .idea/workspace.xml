@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="045ad8c4-3d9f-4d6e-b680-358405ac753a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ORM_EXE/repository/ReadQueryTests.java" afterDir="false" />
+    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_11_2022_9_21__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/DeleteQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/DeleteQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/MysqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/ReadQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/ReadQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/utils/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/Repo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +53,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/learning/Alpha Team Learning/StartAtGoogle/ORM_Exe",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "last_opened_file_path": "D:/Git/ORM_Exe",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,89 +68,23 @@
       <recent name="D:\Git\ORM_Exe\src\main\java\ORM_EXE" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReadQueryTests">
+  <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ORM_EXE.Client" />
       <module name="ORM_Exe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ORM_EXE.*" />
+          <option name="PATTERN" value="ORM_EXE.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadQueryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ORM_EXE.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ORM_EXE.repository" />
-      <option name="MAIN_CLASS_NAME" value="ORM_EXE.repository.ReadQueryTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadQueryTests.ReadQuery_getAllItems_found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ORM_EXE.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ORM_EXE.repository" />
-      <option name="MAIN_CLASS_NAME" value="ORM_EXE.repository.ReadQueryTests" />
-      <option name="METHOD_NAME" value="ReadQuery_getAllItems_found" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadQueryTests.ReadQuery_getItemById_found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ORM_EXE.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ORM_EXE.repository" />
-      <option name="MAIN_CLASS_NAME" value="ORM_EXE.repository.ReadQueryTests" />
-      <option name="METHOD_NAME" value="ReadQuery_getItemById_found" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadQueryTests.ReadQuery_getItemByProp_found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ORM_EXE.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ORM_EXE.repository" />
-      <option name="MAIN_CLASS_NAME" value="ORM_EXE.repository.ReadQueryTests" />
-      <option name="METHOD_NAME" value="ReadQuery_getItemByProp_found" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReadQueryTests" />
-        <item itemvalue="JUnit.ReadQueryTests.ReadQuery_getItemByProp_found" />
-        <item itemvalue="JUnit.ReadQueryTests.ReadQuery_getAllItems_found" />
-        <item itemvalue="JUnit.ReadQueryTests.ReadQuery_getItemById_found" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
@@ -182,6 +115,11 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/utils/Validator.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java</url>
           <line>30</line>
           <option name="timeStamp" value="2" />
@@ -193,13 +131,5 @@
         <watch expression="e.cause" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ORM_Exe$ReadQueryTests.ic" NAME="ReadQueryTests Coverage Results" MODIFIED="1668526380140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>ORM_EXE.repository.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/ORM_Exe$ReadQueryTests_ReadQuery_getAllItems_notEmpty.ic" NAME="ReadQueryTests.ReadQuery_getAllItems_notEmpty Coverage Results" MODIFIED="1668522916402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>ORM_EXE.repository.*</FILTER>
-    </SUITE>
   </component>
 </project>

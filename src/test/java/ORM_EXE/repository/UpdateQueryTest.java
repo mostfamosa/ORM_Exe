@@ -1,3 +1,5 @@
+package ORM_EXE.repository;
+
 import ORM_EXE.entity.Item;
 import ORM_EXE.entity.ItemWithPrimaryKey;
 import ORM_EXE.entity.User;
