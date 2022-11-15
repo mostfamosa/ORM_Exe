@@ -43,7 +43,7 @@ class UpdateQuery<T> {
                     ps.setString(1, jsonObj);
                 }
                 int success = ps.executeUpdate();
-                if (success>0) {
+                if (success > 0) {
                     logger.info("info 400 : item " + clz.getSimpleName() + " updated at field " + field + " set value to " + updatedValue);
                 } else {
                     logger.error("error 200: failed to update item " + clz.getSimpleName() + " at field" + field + " set value to " + updatedValue);
@@ -99,9 +99,13 @@ class UpdateQuery<T> {
                     }
                 }
             }
-            ps.execute();
+            int success = ps.executeUpdate();
+            if (success > 0) {
+                logger.info("info 400 : item updated " + item);
+            } else {
+                logger.error("info 200 : failed to update item " + item);
+            }
             mysqlcon.close();
-            logger.info("info 400 : item updated " + item);
         } catch (SQLException e) {
             logger.error("info 200 : failed to update item " + item);
             throw new RuntimeException(e);
