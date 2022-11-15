@@ -16,7 +16,7 @@ public class MysqlConnection {
             throw new RuntimeException(e);
         }
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/orm_exe", "sqluser", "sqluserpw");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/orm_exe", "mostafa", "Aa123456");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

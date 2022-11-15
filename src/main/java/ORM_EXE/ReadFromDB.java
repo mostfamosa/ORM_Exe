@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,11 +33,19 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    if(field.getName()=="birthDate")
+                    System.out.println( res.getObject(field.getName()));
+                    if(field.getName().equals("birthDate")){
                         continue;
-                    if(field.getName()=="grade")
-                        continue;
-                    field.set(item, res.getObject(field.getName()));
+//                        String[] b = res.getObject(field.getName()).toString().split("/");
+//                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
+//                        field.set(item, ld);
+                    }
+                    else if(field.getName().equals("grade")){
+                        char a = res.getObject(field.getName()).toString().charAt(0);
+                        field.set(item, a);
+                    }
+                    else
+                        field.set(item, res.getObject(field.getName()));
                 }
                 result.add(item);
             }
@@ -61,7 +70,18 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    field.set(item, res.getObject(field.getName()));
+                    if(field.getName().equals("birthDate")){
+                        continue;
+//                        String[] b = res.getObject(field.getName()).toString().split("/");
+//                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
+//                        field.set(item, ld);
+                    }
+                    else if(field.getName().equals("grade")){
+                        char a = res.getObject(field.getName()).toString().charAt(0);
+                        field.set(item, a);
+                    }
+                    else
+                        field.set(item, res.getObject(field.getName()));
                 }
                 con.close();
                 return item;
@@ -89,7 +109,18 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    field.set(item, res.getObject(field.getName()));
+                    if(field.getName().equals("birthDate")){
+                        continue;
+//                        String[] b = res.getObject(field.getName()).toString().split("/");
+//                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
+//                        field.set(item, ld);
+                    }
+                    else if(field.getName().equals("grade")){
+                        char a = res.getObject(field.getName()).toString().charAt(0);
+                        field.set(item, a);
+                    }
+                    else
+                        field.set(item, res.getObject(field.getName()));
                 }
                 result.add(item);
             }
