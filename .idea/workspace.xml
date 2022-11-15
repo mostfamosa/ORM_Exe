@@ -3,15 +3,6 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="ChangeListManager">
-    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
