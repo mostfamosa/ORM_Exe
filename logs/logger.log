@@ -2,3 +2,68 @@
 2022-11-15 14:44:39,074 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=2, name='Daria', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
 2022-11-15 14:45:25,078 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=5, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
 2022-11-15 14:48:34,187 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:58:25,243 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=5, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 15:58:25,308 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 16:00:53,099 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 16:17:23,468 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 16:17:23,547 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 16:38:06,329 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 16:39:17,876 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item java.sql.SQLSyntaxErrorException: Table 'orm_exe.item' doesn't exist
+2022-11-15 16:39:17,880 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.Item: returns null
+2022-11-15 16:46:18,100 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User Table not found!
+2022-11-15 16:46:18,109 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User java.lang.NullPointerException
+2022-11-15 16:46:18,109 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.User: returns null
+2022-11-15 16:49:08,684 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User Table not found!
+2022-11-15 16:49:08,693 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User java.lang.NullPointerException
+2022-11-15 16:49:08,693 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.User: returns null
+2022-11-15 16:49:08,719 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User Table not found!
+2022-11-15 16:49:08,719 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User java.lang.NullPointerException
+2022-11-15 16:49:08,719 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.User: returns null
+2022-11-15 16:49:51,134 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User Table not found!
+2022-11-15 16:49:51,146 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User java.lang.NullPointerException
+2022-11-15 16:49:51,146 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.User: returns null
+2022-11-15 16:50:47,403 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 16:51:19,212 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 16:52:01,714 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item java.sql.SQLSyntaxErrorException: Table 'orm_exe.item' doesn't exist
+2022-11-15 16:52:01,717 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.Item: returns null
+2022-11-15 16:52:19,706 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item Table not found!
+2022-11-15 16:52:19,717 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item java.lang.NullPointerException
+2022-11-15 16:52:19,718 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.Item: returns null
+2022-11-15 16:55:27,747 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item Table not found!
+2022-11-15 16:55:27,760 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item java.lang.NullPointerException
+2022-11-15 16:55:27,761 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.Item: returns null
+2022-11-15 16:58:23,384 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item Table not found!
+2022-11-15 16:58:47,206 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.Item java.lang.NullPointerException
+2022-11-15 16:58:47,207 WARN    ORM_EXE.repository.ReadQuery - Warn 300 :ORM_EXE.entity.Item: returns null
+2022-11-15 17:18:18,087 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:51:59,438 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=6, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 17:51:59,487 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Moose
+2022-11-15 18:03:20,755 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:03:20,759 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:09:49,238 ERROR   ORM_EXE.repository.ReadQuery - error 200: failed to get item
+2022-11-15 18:14:43,007 ERROR   ORM_EXE.repository.ReadQuery - Error 200 :ORM_EXE.entity.User java.lang.NullPointerException
+2022-11-15 18:15:46,058 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:15:46,063 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:17:20,023 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:17:20,026 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:21:19,669 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:21:19,674 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:21:19,713 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:21:19,752 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:26:45,372 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:27:59,787 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:28:51,321 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:28:51,326 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:28:51,359 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:28:51,389 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:31:04,535 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:32:44,143 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:34:53,027 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:35:15,329 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:37:09,265 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:38:05,470 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:38:19,248 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return []
+2022-11-15 18:41:00,346 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:41:00,350 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item added User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 18:41:00,385 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return [User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}, User{id=6, name='Moose', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}]
+2022-11-15 18:41:00,411 INFO    ORM_EXE.repository.ReadQuery - info 400 :ORM_EXE.entity.User item to return User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}

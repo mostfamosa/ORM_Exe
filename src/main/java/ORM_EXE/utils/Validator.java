@@ -10,7 +10,7 @@ public class Validator {
         try {
             DatabaseMetaData md = con.getMetaData();
             ResultSet rs = md.getTables(null, null, tableName,new String[] {"TABLE"});
-            if(rs.next()==true){
+            if(rs.next()){
                 return true;
             }
         } catch (SQLException e) {
