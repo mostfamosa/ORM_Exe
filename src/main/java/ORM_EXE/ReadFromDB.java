@@ -1,11 +1,14 @@
 package ORM_EXE;
 
 
+import com.google.gson.Gson;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,15 +35,20 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    if(field.getName()=="birthDate")
-                        continue;
-                    if(field.getName()=="grade")
-                        continue;
-                    field.set(item, res.getObject(field.getName()));
+                    System.out.println(res.getObject(field.getName()));
+                    if (!field.getType().isPrimitive()) {
+                        Gson g = new Gson();
+                        Object obj = g.fromJson(res.getObject(field.getName()).toString(), field.getType());
+                        field.set(item, obj);
+                    } else if (field.getType().equals(char.class)) {
+                        char a = res.getObject(field.getName()).toString().charAt(0);
+                        field.set(item, a);
+                    } else
+                        field.set(item, res.getObject(field.getName()));
                 }
                 result.add(item);
             }
-            con.close();
+            mysqlcon.close();
             return result;
         } catch (Exception e) {
             System.out.println("Error: " + e);
@@ -61,9 +69,17 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    field.set(item, res.getObject(field.getName()));
+                    if (!field.getType().isPrimitive()) {
+                        Gson g = new Gson();
+                        Object obj = g.fromJson(res.getObject(field.getName()).toString(), field.getType());
+                        field.set(item, obj);
+                    } else if (field.getType().equals(char.class)) {
+                        char a = res.getObject(field.getName()).toString().charAt(0);
+                        field.set(item, a);
+                    } else
+                        field.set(item, res.getObject(field.getName()));
                 }
-                con.close();
+                mysqlcon.close();
                 return item;
             } else
                 System.out.println("There is no " + clz.getSimpleName() + " with id = " + id);
@@ -73,14 +89,14 @@ public class ReadFromDB<T> {
         return null;
     }
 
-    public List<T> getItemsByProp(String propName,String propValue) {
+    public List<T> getItemsByProp(String propName, String propValue) {
         try {
             mysqlcon = MysqlConnection.getInstance();
             con = mysqlcon.getConnection();
             Statement stat = con.createStatement();
             ResultSet res = stat.executeQuery(String.format(
                     "select * from %s where %s = '%s'",
-                    clz.getSimpleName().toLowerCase(), propName,propValue));
+                    clz.getSimpleName().toLowerCase(), propName, propValue));
             List<T> result = new ArrayList<>();
 
             while (res.next()) {
@@ -89,11 +105,19 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    field.set(item, res.getObject(field.getName()));
+                    if (!field.getType().isPrimitive()) {
+                        Gson g = new Gson();
+                        Object obj = g.fromJson(res.getObject(field.getName()).toString(), field.getType());
+                        field.set(item, obj);
+                    } else if (field.getType().equals(char.class)) {
+                        char a = res.getObject(field.getName()).toString().charAt(0);
+                        field.set(item, a);
+                    } else
+                        field.set(item, res.getObject(field.getName()));
                 }
                 result.add(item);
             }
-            con.close();
+            mysqlcon.close();
             return result;
         } catch (Exception e) {
             System.out.println("Error: " + e);

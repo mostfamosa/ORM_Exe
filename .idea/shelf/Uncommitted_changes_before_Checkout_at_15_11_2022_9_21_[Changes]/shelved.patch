@@ -1,0 +1,164 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -6,15 +6,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
+-<<<<<<< HEAD
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/MysqlConnection.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/ReadFromDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/ReadFromDB.java" afterDir="false" />
+-=======
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Item.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" afterDir="false" />
+->>>>>>> main
+       <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/User.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -25,16 +17,13 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Enum" />
++        <option value="AnnotationType" />
+         <option value="Class" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -46,7 +35,6 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-<<<<<<< HEAD
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "Downloaded.Files.Path.Enabled": "false",
+@@ -60,14 +48,33 @@
+     "project.structure.last.edited": "Libraries",
+     "project.structure.proportion": "0.0",
+     "project.structure.side.proportion": "0.0"
+-=======
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+->>>>>>> main
+   }
+-}</component>
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CreateClassDialog.RecentsKey">
++      <recent name="ORM_EXE" />
++    </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="ORM_EXE.Client" />
++      <module name="ORM_Exe" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="ORM_EXE.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Client" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -77,14 +84,6 @@
+       <option name="presentableId" value="Default" />
+       <updated>1668348461577</updated>
+     </task>
+-    <task id="LOCAL‎-00001" summary="add and update features">
+-      <created>1668429467246</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL‎-00001" />
+-      <option name="project" value="LOCAL‎" />
+-      <updated>1668429467246</updated>
+-    </task>
+-    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -98,34 +97,4 @@
+       </map>
+     </option>
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="add and update features" />
+-    <option name="LAST_COMMIT_MESSAGE" value="add and update features" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java</url>
+-          <line>58</line>
+-          <option name="timeStamp" value="13" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java</url>
+-          <line>39</line>
+-          <option name="timeStamp" value="14" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java</url>
+-          <line>58</line>
+-          <option name="timeStamp" value="17" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-    <watches-manager>
+-      <configuration name="Application">
+-        <watch expression="e.cause" />
+-      </configuration>
+-    </watches-manager>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/ORM_EXE/Client.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ORM_EXE/Client.java b/src/main/java/ORM_EXE/Client.java
+--- a/src/main/java/ORM_EXE/Client.java	
++++ b/src/main/java/ORM_EXE/Client.java	
+@@ -3,11 +3,9 @@
+ import java.sql.Connection;
+ import java.sql.SQLException;
+ import java.sql.Statement;
+-<<<<<<< HEAD
+-=======
+ import java.time.LocalDate;
+ import java.util.ArrayList;
+->>>>>>> main
++
+ import java.util.List;
+ 
+ public class Client {

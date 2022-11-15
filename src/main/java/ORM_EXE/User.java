@@ -12,6 +12,10 @@ public class User {
     private Boolean employed;
  //   private Item item;
 
+
+    public User() {
+    }
+
     public User(int id, String name, double weight, int age, char grade, LocalDate birthDate, Boolean employed) {
         this.id = id;
         this.name = name;
@@ -85,5 +89,18 @@ public class User {
 
     public void setEmployed(Boolean employed) {
         this.employed = employed;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", age=" + age +
+                ", grade=" + grade +
+                ", birthDate=" + birthDate +
+                ", employed=" + employed +
+                '}';
     }
 }

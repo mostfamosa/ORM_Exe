@@ -11,30 +11,36 @@ public class Client {
     public static void main(String[] args) {
 
         MysqlConnection mysqlcon = MysqlConnection.getInstance();
-        try {
-            Connection con = mysqlcon.getConnection();
-            Add add = new Add(Item.class);
-            Update update=new Update(User.class);
+        Connection con = mysqlcon.getConnection();
 
-            User user1 = new User(6, "Rivka", 50, 24, 'A', LocalDate.of(1998, 2, 22), false);
-            update.updateItem(user1);
-            //Creating table example:
-            /*
-            CreateTable<User> createTable= new CreateTable<>(User.class);
-            createTable.createTableInDB();
-            */
+        /*Create Table*/
+//        CreateTable<User> createTable = new CreateTable<>(User.class);
+//        createTable.createTableInDB();
 
-            //Delete examples:
-            /*
-            Delete<User> delete = new Delete<>(User.class);
-            delete.deleteTable();
-            delete.deleteAllRecordsByProperty("name","Carol");
-            delete.deleteOneRecordByProperty("name","marol");
-            */
 
-            con.close();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        /*Create object of the class*/
+//        Add add = new Add(User.class);
+//        User user = new User(1,"Daria",50,18,'A',LocalDate.of(1996,12,25),true);
+//        add.addItem(user);
+
+        /*get objects of the class*/
+//        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
+//        List<User> users = userReadFromDB.getAllItems();
+//        users.forEach(user -> System.out.println(user.toString()));
+
+        /*update object of the class*/
+//        Update update = new Update(User.class);
+//        User user2 = new User(1,"Rachel",50,18,'A',LocalDate.of(1996,12,25),true);
+//        update.updateItem(user2);
+//        mysqlcon.close();
+//
+//        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
+//        List<User> users = userReadFromDB.getAllItems();
+//        users.forEach(user -> System.out.println(user.toString()));
+
+        /*delete object*/
+//        Delete<User> delete = new Delete<>(User.class);
+//        delete.deleteOneRecordByProperty("age","18");
+
     }
 }
