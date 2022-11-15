@@ -23,7 +23,7 @@ public class MysqlConnection {
             throw new RuntimeException(e);
         }
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/orm_exe", "root", "abcd1234");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/orm_exe", "mostafa", "Aa123456");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -38,5 +38,13 @@ public class MysqlConnection {
 
     public Connection getConnection() {
         return connection;
+    }
+    public void close(){
+        instance=null;
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to close connection",e);
+        }
     }
 }

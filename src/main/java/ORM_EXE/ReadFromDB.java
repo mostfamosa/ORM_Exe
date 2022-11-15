@@ -1,6 +1,8 @@
 package ORM_EXE;
 
 
+import com.google.gson.Gson;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -49,7 +51,7 @@ public class ReadFromDB<T> {
                 }
                 result.add(item);
             }
-            con.close();
+            mysqlcon.close();
             return result;
         } catch (Exception e) {
             System.out.println("Error: " + e);
@@ -83,7 +85,7 @@ public class ReadFromDB<T> {
                     else
                         field.set(item, res.getObject(field.getName()));
                 }
-                con.close();
+                mysqlcon.close();
                 return item;
             } else
                 System.out.println("There is no " + clz.getSimpleName() + " with id = " + id);
@@ -109,13 +111,16 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    if(field.getName().equals("birthDate")){
-                        continue;
+                    if(!field.getType().isPrimitive()){
+                        Gson g = new Gson();
+                        Object obj = g.fromJson((String) res.getObject(field.getName()),field.getClass());
+                        field.set(item, obj);
+
 //                        String[] b = res.getObject(field.getName()).toString().split("/");
 //                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
 //                        field.set(item, ld);
                     }
-                    else if(field.getName().equals("grade")){
+                    else if(field.getType().equals(char.class)){
                         char a = res.getObject(field.getName()).toString().charAt(0);
                         field.set(item, a);
                     }
@@ -124,7 +129,7 @@ public class ReadFromDB<T> {
                 }
                 result.add(item);
             }
-            con.close();
+            mysqlcon.close();
             return result;
         } catch (Exception e) {
             System.out.println("Error: " + e);
