@@ -2,6 +2,7 @@
 2022-11-15 14:44:39,074 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=2, name='Daria', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
 2022-11-15 14:45:25,078 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=5, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
 2022-11-15 14:48:34,187 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+<<<<<<< HEAD
 2022-11-15 15:58:25,243 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=5, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
 2022-11-15 15:58:25,308 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
 2022-11-15 16:00:53,099 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}

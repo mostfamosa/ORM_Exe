@@ -10,7 +10,6 @@ public class User {
     private char grade;
     private LocalDate birthDate;
     private Boolean employed;
- //   private Item item;
 
 
     public User() {
@@ -24,16 +23,8 @@ public class User {
         this.grade = grade;
         this.birthDate = birthDate;
         this.employed = employed;
-       // this.item=item;
     }
 
-//    public Item getItem() {
-//        return item;
-//    }
-
-//    public void setItem(Item item) {
-//        this.item = item;
-//    }
 
     public int getId() {
         return id;
@@ -103,4 +94,17 @@ public class User {
                 ", employed=" + employed +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        User u=(User) obj;
+        return this.id==u.getId()&&
+                this.employed==u.getEmployed()&&
+                this.name.equals(u.getName())&&
+                this.grade==u.getGrade()&&
+                this.age==u.getAge()&&
+                this.birthDate.equals(u.birthDate)&&
+                this.weight==u.getWeight();
+    }
+
 }

@@ -1,14 +1,17 @@
 package ORM_EXE.repository;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.sql.Statement;
 
- class CreateTableQuery<T> {
+class CreateTableQuery<T> {
     private final Class<T> clz;
     private MysqlConnection con;
-
+    private static Logger logger = LogManager.getLogger(CreateTableQuery.class.getName());
     public CreateTableQuery(Class<T> clz) {
         this.clz = clz;
         con = MysqlConnection.getInstance();
@@ -65,10 +68,12 @@ import java.sql.Statement;
             con = MysqlConnection.getInstance();
             Statement statement = con.getConnection().createStatement();
             statement.executeUpdate(queryStr.toString());
+            logger.info("Created table " + this.clz.getSimpleName().toLowerCase());
             con.close();
         } catch (SQLException e) {
+            logger.error("Failed to create sql statement while trying to create table " + this.clz.getSimpleName() + ". ");
             throw new RuntimeException(e);
         }
     }
-    
+
 }

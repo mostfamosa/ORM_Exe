@@ -11,9 +11,6 @@ public class Client {
 
 
         Repo repo = new Repo<>(User.class);
-        User user = new User(6,"Daria",50,20,'C', LocalDate.of(1996,12,25),true);
-        repo.addItem(user);
-        repo.updateField("name","Moose",6);
         /*Create Table*/
 //        CreateTable<User> createTable = new CreateTable<>(User.class);
 //        createTable.createTableInDB();
@@ -25,9 +22,10 @@ public class Client {
 //        add.addItem(user);
 
         /*get objects of the class*/
+       // List<User> users=repo.getAllItems();
 //        ReadFromDB<User> userReadFromDB = new ReadFromDB<>(User.class);
 //        List<User> users = userReadFromDB.getAllItems();
-//        users.forEach(user -> System.out.println(user.toString()));
+       // users.forEach(u -> System.out.println(u.toString()));
 
         /*update object of the class*/
 //        Update update = new Update(User.class);

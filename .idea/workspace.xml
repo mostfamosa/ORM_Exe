@@ -186,15 +186,6 @@
           <line>30</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/ReadQuery.java</url>
-          <line>111</line>
-          <properties class="ORM_EXE.repository.ReadQuery" method="getItemsByProp">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
