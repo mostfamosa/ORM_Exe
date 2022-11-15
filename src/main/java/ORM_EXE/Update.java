@@ -3,6 +3,8 @@ package ORM_EXE;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mysql.cj.MysqlType;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -12,6 +14,7 @@ import java.sql.Statement;
 import java.time.LocalDate;
 
 public class Update<T> {
+    private static Logger logger = LogManager.getLogger(Update.class.getName());
     private Class<T> clz;
     private MysqlConnection mysqlcon;
     private Connection con;
@@ -21,25 +24,32 @@ public class Update<T> {
     }
 
     public void updateField(String field, T updatedValue, int id) {
+
         try {
-            mysqlcon = MysqlConnection.getInstance();
-            con = mysqlcon.getConnection();
-            String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET " + field + " = ? " + "WHERE id =" + id;
-            PreparedStatement ps = con.prepareStatement(sqlUpdate);
-            if (updatedValue.getClass().isPrimitive()) {
-                if (updatedValue.getClass().getSimpleName().equals("Character")) {
-                    ps.setString(1, String.valueOf(updatedValue));
-                } else {
-                    ps.setObject(1, updatedValue);
-                }
+            if (field == null || updatedValue == null || !Validator.isFieldExistsInTable(con, clz.getSimpleName().toLowerCase(), field)) {
+                logger.warn("warn 300: failed to update field in item");
             } else {
-                Gson gson = new Gson();
-                String jsonObj = gson.toJson(updatedValue);
-                ps.setString(1, jsonObj);
+                mysqlcon = MysqlConnection.getInstance();
+                con = mysqlcon.getConnection();
+                String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET " + field + " = ? " + "WHERE id =" + id;
+                PreparedStatement ps = con.prepareStatement(sqlUpdate);
+                if (updatedValue.getClass().isPrimitive()) {
+                    if (updatedValue.getClass().getSimpleName().equals("Character")) {
+                        ps.setString(1, String.valueOf(updatedValue));
+                    } else {
+                        ps.setObject(1, updatedValue);
+                    }
+                } else {
+                    Gson gson = new Gson();
+                    String jsonObj = gson.toJson(updatedValue);
+                    ps.setString(1, jsonObj);
+                }
+                ps.execute();
+                mysqlcon.close();
+                logger.info("info 400 : item " + clz.getSimpleName() + " updated at field " + field + " set value to " + updatedValue);
             }
-            ps.execute();
-            mysqlcon.close();
         } catch (SQLException e) {
+            logger.error("error 200: failed to update item " + clz.getSimpleName() + " at field" + field + " set value to " + updatedValue);
             throw new RuntimeException(e);
         }
     }
@@ -89,7 +99,9 @@ public class Update<T> {
             }
             ps.execute();
             mysqlcon.close();
+            logger.info("info 400 : item updated " + item);
         } catch (SQLException e) {
+            logger.error("info 200 : failed to update item " + item);
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
