@@ -35,18 +35,15 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    System.out.println( res.getObject(field.getName()));
-                    if(field.getName().equals("birthDate")){
-                        continue;
-//                        String[] b = res.getObject(field.getName()).toString().split("/");
-//                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
-//                        field.set(item, ld);
-                    }
-                    else if(field.getName().equals("grade")){
+                    System.out.println(res.getObject(field.getName()));
+                    if (!field.getType().isPrimitive()) {
+                        Gson g = new Gson();
+                        Object obj = g.fromJson(res.getObject(field.getName()).toString(), field.getType());
+                        field.set(item, obj);
+                    } else if (field.getType().equals(char.class)) {
                         char a = res.getObject(field.getName()).toString().charAt(0);
                         field.set(item, a);
-                    }
-                    else
+                    } else
                         field.set(item, res.getObject(field.getName()));
                 }
                 result.add(item);
@@ -72,17 +69,14 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    if(field.getName().equals("birthDate")){
-                        continue;
-//                        String[] b = res.getObject(field.getName()).toString().split("/");
-//                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
-//                        field.set(item, ld);
-                    }
-                    else if(field.getName().equals("grade")){
+                    if (!field.getType().isPrimitive()) {
+                        Gson g = new Gson();
+                        Object obj = g.fromJson(res.getObject(field.getName()).toString(), field.getType());
+                        field.set(item, obj);
+                    } else if (field.getType().equals(char.class)) {
                         char a = res.getObject(field.getName()).toString().charAt(0);
                         field.set(item, a);
-                    }
-                    else
+                    } else
                         field.set(item, res.getObject(field.getName()));
                 }
                 mysqlcon.close();
@@ -95,14 +89,14 @@ public class ReadFromDB<T> {
         return null;
     }
 
-    public List<T> getItemsByProp(String propName,String propValue) {
+    public List<T> getItemsByProp(String propName, String propValue) {
         try {
             mysqlcon = MysqlConnection.getInstance();
             con = mysqlcon.getConnection();
             Statement stat = con.createStatement();
             ResultSet res = stat.executeQuery(String.format(
                     "select * from %s where %s = '%s'",
-                    clz.getSimpleName().toLowerCase(), propName,propValue));
+                    clz.getSimpleName().toLowerCase(), propName, propValue));
             List<T> result = new ArrayList<>();
 
             while (res.next()) {
@@ -111,20 +105,14 @@ public class ReadFromDB<T> {
                 Field[] declaredFields = clz.getDeclaredFields();
                 for (Field field : declaredFields) {
                     field.setAccessible(true);
-                    if(!field.getType().isPrimitive()){
+                    if (!field.getType().isPrimitive()) {
                         Gson g = new Gson();
-                        Object obj = g.fromJson((String) res.getObject(field.getName()),field.getClass());
+                        Object obj = g.fromJson(res.getObject(field.getName()).toString(), field.getType());
                         field.set(item, obj);
-
-//                        String[] b = res.getObject(field.getName()).toString().split("/");
-//                        LocalDate ld =LocalDate.of(Integer.valueOf(b[0]).intValue(),Integer.valueOf(b[1]).intValue(),Integer.valueOf(b[2]).intValue());
-//                        field.set(item, ld);
-                    }
-                    else if(field.getType().equals(char.class)){
+                    } else if (field.getType().equals(char.class)) {
                         char a = res.getObject(field.getName()).toString().charAt(0);
                         field.set(item, a);
-                    }
-                    else
+                    } else
                         field.set(item, res.getObject(field.getName()));
                 }
                 result.add(item);
