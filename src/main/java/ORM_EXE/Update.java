@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.mysql.cj.MysqlType;
 
 import java.lang.reflect.Field;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,23 +13,32 @@ import java.time.LocalDate;
 
 public class Update<T> {
     private Class<T> clz;
-    MysqlConnection mysqlConnection;
+    private MysqlConnection mysqlcon;
+    private Connection con;
 
     public Update(Class<T> clz) {
         this.clz = clz;
-        mysqlConnection = MysqlConnection.getInstance();
     }
 
     public void updateField(String field, T updatedValue, int id) {
         try {
+            mysqlcon = MysqlConnection.getInstance();
+            con = mysqlcon.getConnection();
             String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET " + field + " = ? " + "WHERE id =" + id;
-            PreparedStatement ps = mysqlConnection.getConnection().prepareStatement(sqlUpdate);
-            if (updatedValue.getClass().getSimpleName().equals("Character")) {
-                ps.setString(1, String.valueOf(updatedValue));
+            PreparedStatement ps = con.prepareStatement(sqlUpdate);
+            if (updatedValue.getClass().isPrimitive()) {
+                if (updatedValue.getClass().getSimpleName().equals("Character")) {
+                    ps.setString(1, String.valueOf(updatedValue));
+                } else {
+                    ps.setObject(1, updatedValue);
+                }
             } else {
-                ps.setObject(1, updatedValue);
+                Gson gson = new Gson();
+                String jsonObj = gson.toJson(updatedValue);
+                ps.setString(1, jsonObj);
             }
             ps.execute();
+            con.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -36,7 +46,9 @@ public class Update<T> {
 
     public void updateItem(T item) {
         try {
-            Statement stmt = mysqlConnection.getConnection().createStatement();
+            mysqlcon = MysqlConnection.getInstance();
+            con = mysqlcon.getConnection();
+            Statement stmt = con.createStatement();
             Field[] allFields = clz.getDeclaredFields();
             String insertCommand = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET ";
             Integer id = null;
@@ -54,7 +66,7 @@ public class Update<T> {
 
             }
             insertCommand += " WHERE id = " + id;
-            PreparedStatement ps = mysqlConnection.getConnection().prepareStatement(insertCommand);
+            PreparedStatement ps = con.prepareStatement(insertCommand);
             int index = 1;
             for (int i = 0; i < allFields.length && index < allFields.length; i++) {
                 allFields[i].setAccessible(true);
@@ -76,6 +88,7 @@ public class Update<T> {
                 }
             }
             ps.execute();
+            con.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
