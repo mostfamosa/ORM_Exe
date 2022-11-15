@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
- class UpdateQuery<T> {
+class UpdateQuery<T> {
     private static Logger logger = LogManager.getLogger(UpdateQuery.class.getName());
     private Class<T> clz;
     private MysqlConnection mysqlcon;
@@ -42,9 +42,13 @@ import java.sql.Statement;
                     String jsonObj = gson.toJson(updatedValue);
                     ps.setString(1, jsonObj);
                 }
-                ps.execute();
+                int success = ps.executeUpdate();
+                if (success>0) {
+                    logger.info("info 400 : item " + clz.getSimpleName() + " updated at field " + field + " set value to " + updatedValue);
+                } else {
+                    logger.error("error 200: failed to update item " + clz.getSimpleName() + " at field" + field + " set value to " + updatedValue);
+                }
                 mysqlcon.close();
-                logger.info("info 400 : item " + clz.getSimpleName() + " updated at field " + field + " set value to " + updatedValue);
             }
         } catch (SQLException e) {
             logger.error("error 200: failed to update item " + clz.getSimpleName() + " at field" + field + " set value to " + updatedValue);

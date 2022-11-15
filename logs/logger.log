@@ -2,3 +2,27 @@
 2022-11-15 14:44:39,074 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=2, name='Daria', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
 2022-11-15 14:45:25,078 INFO    ORM_EXE.repository.AddQuery - info 400 : item added User{id=5, name='Daria', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
 2022-11-15 14:48:34,187 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:15:09,215 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:15:09,280 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:15:09,281 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:15:09,283 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:15:09,284 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:15:09,284 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=7, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:15:09,285 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=2, name='Daria', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 15:15:09,286 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 15:28:38,149 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:28:38,223 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:28:38,224 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:28:38,226 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:28:38,227 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=6, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:28:38,228 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=7, name='Rivka', weight=58.0, age=24, grade=A, birthDate=1998-02-22, employed=false}
+2022-11-15 15:28:38,230 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=2, name='Daria', weight=60.0, age=20, grade=B, birthDate=1996-12-25, employed=true}
+2022-11-15 15:28:38,231 INFO    ORM_EXE.repository.ReadQuery - info 400 : item added User{id=5, name='Rachel', weight=50.0, age=20, grade=C, birthDate=1996-12-25, employed=true}
+2022-11-15 15:29:31,771 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:36:01,687 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:36:30,344 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:37:28,317 ERROR   ORM_EXE.repository.UpdateQuery - error 200: failed to update item User at fieldname set value to Rachel
+2022-11-15 15:38:18,024 ERROR   ORM_EXE.repository.UpdateQuery - error 200: failed to update item User at fieldname set value to Rachel
+2022-11-15 15:40:38,711 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel
+2022-11-15 15:40:56,465 ERROR   ORM_EXE.repository.UpdateQuery - error 200: failed to update item User at fieldname set value to Rachel
+2022-11-15 15:41:10,587 INFO    ORM_EXE.repository.UpdateQuery - info 400 : item User updated at field name set value to Rachel

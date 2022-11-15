@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" afterDir="false" />
+    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="minor fix in update field">
+      <change afterPath="$PROJECT_DIR$/src/test/java/AddQueryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +115,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/utils/Validator.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
+          <line>26</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
