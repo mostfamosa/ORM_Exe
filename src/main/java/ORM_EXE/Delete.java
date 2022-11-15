@@ -31,7 +31,7 @@ public class Delete<T> {
             return -1;
         }
         try {
-            int result = this.con.getConnection().createStatement().executeUpdate("DELETE FROM " + this.clz.getSimpleName().toLowerCase() + " WHERE " + propName +  "='" + propValue + "' " + "LIMIT 1;");
+            int result = this.con.getConnection().createStatement().executeUpdate("DELETE FROM " + this.clz.getSimpleName().toLowerCase() + " WHERE " + propName +  "= \'"+ propValue + "\' " + "LIMIT 1;");
             System.out.println(result + " rows deleted in table " + this.clz.getSimpleName().toLowerCase());
             return result;
         } catch (SQLException e) {
