@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/Update.java" afterDir="false" />
-    </list>
+    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
