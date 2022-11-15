@@ -20,7 +20,7 @@ import java.util.Properties;
             throw new RuntimeException(e);
         }
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/orm_exe", "mostafa", "Aa123456");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/orm_exe", "root", "abcd1234");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

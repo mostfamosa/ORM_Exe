@@ -11,8 +11,9 @@ public class Client {
 
 
         Repo repo = new Repo<>(User.class);
-        User user = new User(2,"Daria",60,20,'B', LocalDate.of(1996,12,25),true);
-        repo.getAllItems();
+        User user = new User(5,"Daria",50,20,'C', LocalDate.of(1996,12,25),true);
+        //repo.addItem(user);
+        repo.updateField("name","Rachel",5);
         /*Create Table*/
 //        CreateTable<User> createTable = new CreateTable<>(User.class);
 //        createTable.createTableInDB();

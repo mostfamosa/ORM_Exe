@@ -24,11 +24,11 @@ import java.sql.Statement;
     public <T> void updateField(String field, T updatedValue, int id) {
 
         try {
+            mysqlcon = MysqlConnection.getInstance();
+            con = mysqlcon.getConnection();
             if (field == null || updatedValue == null || !Validator.isFieldExistsInTable(con, clz.getSimpleName().toLowerCase(), field)) {
                 logger.warn("warn 300: failed to update field in item");
             } else {
-                mysqlcon = MysqlConnection.getInstance();
-                con = mysqlcon.getConnection();
                 String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET " + field + " = ? " + "WHERE id =" + id;
                 PreparedStatement ps = con.prepareStatement(sqlUpdate);
                 if (updatedValue.getClass().isPrimitive()) {
