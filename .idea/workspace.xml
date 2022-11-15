@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="minor fix in update field">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/ItemWithPrimaryKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UpdateQueryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AddQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddQueryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +65,12 @@
       <recent name="D:\Git\ORM_Exe\src\main\java\ORM_EXE" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddQueryTest.givenEmptyList_thenItemsNotAdded">
-    <configuration name="AddQueryTest.givenEmptyList_thenItemsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AddQueryTest">
+    <configuration name="AddQueryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ORM_Exe" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="METHOD_NAME" value="givenEmptyList_thenItemsNotAdded" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -84,6 +80,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
       <option name="METHOD_NAME" value="givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddQueryTest.givenItem_thenAddItemToNewTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ORM_Exe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
+      <option name="METHOD_NAME" value="givenItem_thenAddItemToNewTable" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,23 +115,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddQueryTest.givenNull_thenItemsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="METHOD_NAME" value="givenNull_thenItemsNotAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddQueryTest.givenEmptyList_thenItemsNotAdded" />
-        <item itemvalue="JUnit.AddQueryTest.givenNull_thenItemsNotAdded" />
+        <item itemvalue="JUnit.AddQueryTest" />
         <item itemvalue="JUnit.AddQueryTest.givenListOfItems_thenItemsAdded" />
         <item itemvalue="JUnit.AddQueryTest.givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" />
         <item itemvalue="JUnit.AddQueryTest.givenNull_thenItemIsNotAdded" />
+        <item itemvalue="JUnit.AddQueryTest.givenItem_thenAddItemToNewTable" />
       </list>
     </recent_temporary>
   </component>

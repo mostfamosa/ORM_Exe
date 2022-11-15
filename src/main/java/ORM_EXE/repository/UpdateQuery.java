@@ -28,6 +28,7 @@ class UpdateQuery<T> {
             con = mysqlcon.getConnection();
             if (field == null || updatedValue == null || !Validator.isFieldExistsInTable(con, clz.getSimpleName().toLowerCase(), field)) {
                 logger.warn("warn 300: failed to update field in item");
+                throw new IllegalArgumentException("cannot update item");
             } else {
                 String sqlUpdate = "UPDATE " + clz.getSimpleName().toLowerCase() + " SET " + field + " = ? " + "WHERE id =" + id;
                 PreparedStatement ps = con.prepareStatement(sqlUpdate);
@@ -47,6 +48,7 @@ class UpdateQuery<T> {
                     logger.info("info 400 : item " + clz.getSimpleName() + " updated at field " + field + " set value to " + updatedValue);
                 } else {
                     logger.error("error 200: failed to update item " + clz.getSimpleName() + " at field" + field + " set value to " + updatedValue);
+                    throw new RuntimeException("failed to update");
                 }
                 mysqlcon.close();
             }
@@ -54,9 +56,17 @@ class UpdateQuery<T> {
             logger.error("error 200: failed to update item " + clz.getSimpleName() + " at field" + field + " set value to " + updatedValue);
             throw new RuntimeException(e);
         }
+        finally {
+            mysqlcon.close();
+        }
     }
 
     public <T> void updateItem(T item) {
+        if (item == null) {
+            logger.warn("warn 200: failed to update null item");
+            throw new IllegalArgumentException("cannot update null");
+        }
+
         try {
             mysqlcon = MysqlConnection.getInstance();
             con = mysqlcon.getConnection();
@@ -104,13 +114,16 @@ class UpdateQuery<T> {
                 logger.info("info 400 : item updated " + item);
             } else {
                 logger.error("info 200 : failed to update item " + item);
+                throw new RuntimeException("failed to update item");
             }
-            mysqlcon.close();
+
         } catch (SQLException e) {
             logger.error("info 200 : failed to update item " + item);
-            throw new RuntimeException(e);
+            throw new RuntimeException("failed to update item");
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
+        }finally {
+            mysqlcon.close();
         }
     }
 }

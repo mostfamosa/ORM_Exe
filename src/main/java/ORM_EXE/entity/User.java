@@ -94,4 +94,17 @@ public class User {
                 ", employed=" + employed +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        User u=(User) obj;
+        return this.id==u.getId()&&
+                this.employed==u.getEmployed()&&
+                this.name.equals(u.getName())&&
+                this.grade==u.getGrade()&&
+                this.age==u.getAge()&&
+                this.birthDate.equals(u.birthDate)&&
+                this.weight==u.getWeight();
+    }
+
 }
