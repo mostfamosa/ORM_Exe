@@ -15,17 +15,17 @@ public class Add<T> {
 
     public Add(Class<T> clz) {
         this.clz = clz;
-        this.mysqlConnection = MysqlConnection.getInstance();
     }
 
-    MysqlConnection mysqlConnection;
+    private MysqlConnection mysqlcon;
+    private Connection con;
     public static final int MYSQL_DUPLICATE_PK = 1062;
 
 
     private boolean checkIfTableExist() {
         ResultSet rs = null;
         try {
-            DatabaseMetaData md = mysqlConnection.getConnection().getMetaData();
+            DatabaseMetaData md = con.getMetaData();
             rs = md.getTables(null, null, clz.getSimpleName().toLowerCase(), null);
             if (rs.next()) {
                 return true;
@@ -39,8 +39,9 @@ public class Add<T> {
 
     public <T> void addItem(T item) {
         try {
-            Statement stmt = mysqlConnection.getConnection().createStatement();
-            if (!checkIfTableExist()) {
+            mysqlcon = MysqlConnection.getInstance();
+            con = mysqlcon.getConnection();
+            if (!Validator.isTableExists(con, clz.getSimpleName().toLowerCase())) {
                 CreateTable createTable = new CreateTable(clz);
                 createTable.createTableInDB();
             }
@@ -54,7 +55,7 @@ public class Add<T> {
                     insertCommand += ')';
                 }
             }
-            PreparedStatement ps = mysqlConnection.getConnection().prepareStatement(insertCommand);
+            PreparedStatement ps = con.prepareStatement(insertCommand);
             for (int i = 0; i < allFields.length; i++) {
                 allFields[i].setAccessible(true);
                 Object value = null;
@@ -72,6 +73,7 @@ public class Add<T> {
                 }
             }
             ps.execute();
+            con.close();
         } catch (SQLException e) {
             if (e.getErrorCode() == MYSQL_DUPLICATE_PK) {
                 throw new RuntimeException("Primary key already used");

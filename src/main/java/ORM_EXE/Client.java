@@ -13,17 +13,18 @@ public class Client {
         MysqlConnection mysqlcon = MysqlConnection.getInstance();
         try {
             Connection con = mysqlcon.getConnection();
-            Add add = new Add(Item.class);
-            Update update=new Update(User.class);
 
-            User user1 = new User(6, "Rivka", 50, 24, 'A', LocalDate.of(1998, 2, 22), false);
-            update.updateItem(user1);
+
+
             //Creating table example:
-            /*
-            CreateTable<User> createTable= new CreateTable<>(User.class);
-            createTable.createTableInDB();
-            */
 
+//            CreateTable<User> createTable = new CreateTable<>(User.class);
+//            createTable.createTableInDB();
+            Add<User> add = new Add(User.class);
+            User user1 = new User(7, "Rivka", 58, 24, 'A', LocalDate.of(1998, 2, 22), false);
+//            Update update = new Update(User.class);
+//            update.updateField("name","Rivka",6);
+            add.addItem(user1);
             //Delete examples:
             /*
             Delete<User> delete = new Delete<>(User.class);
