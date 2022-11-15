@@ -17,7 +17,7 @@ import java.sql.Statement;
     public void createTableInDB() {
 
         StringBuilder queryStr = new StringBuilder();
-        queryStr.append("create table " + clz.getName() + "(");
+        queryStr.append("create table if not exists " + clz.getSimpleName().toLowerCase() + "(");
         StringBuilder primaryKey = new StringBuilder();
 
         Field[] classFields = clz.getDeclaredFields();
