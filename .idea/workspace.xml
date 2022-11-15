@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="minor fix in update field">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UpdateQueryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java" afterDir="false" />
+    <list default="true" id="42e760f2-cddf-433c-90ef-149288987a75" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ORM_EXE/repository/CreateTableQuery.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,63 +62,24 @@
       <recent name="D:\Git\ORM_Exe\src\main\java\ORM_EXE" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddQueryTest">
-    <configuration name="AddQueryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ORM_EXE.Client" />
       <module name="ORM_Exe" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddQueryTest.givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="METHOD_NAME" value="givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddQueryTest.givenItem_thenAddItemToNewTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="METHOD_NAME" value="givenItem_thenAddItemToNewTable" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddQueryTest.givenListOfItems_thenItemsAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="METHOD_NAME" value="givenListOfItems_thenItemsAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddQueryTest.givenNull_thenItemIsNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ORM_Exe" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddQueryTest" />
-      <option name="METHOD_NAME" value="givenNull_thenItemIsNotAdded" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ORM_EXE.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddQueryTest" />
-        <item itemvalue="JUnit.AddQueryTest.givenListOfItems_thenItemsAdded" />
-        <item itemvalue="JUnit.AddQueryTest.givenItemWithPrimaryKeyThatExists_thenItemIsNotAdded" />
-        <item itemvalue="JUnit.AddQueryTest.givenNull_thenItemIsNotAdded" />
-        <item itemvalue="JUnit.AddQueryTest.givenItem_thenAddItemToNewTable" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -151,24 +109,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/utils/Validator.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/UpdateQuery.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java</url>
           <line>30</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ORM_EXE/repository/AddQuery.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

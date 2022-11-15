@@ -54,11 +54,11 @@ public class Repo<T> {
         return deleteQuery.deleteTable();
     }
 
-    public int deleteOneRecordByProperty(String propName, String propValue){
+    public <T> int deleteOneRecordByProperty(String propName, T propValue){
         return deleteQuery.deleteOneRecordByProperty(propName,propValue);
     }
 
-    public int deleteAllRecordsByProperty(String propName, String propValue){
+    public <T> int deleteAllRecordsByProperty(String propName, T propValue){
         return deleteQuery.deleteAllRecordsByProperty(propName,propValue);
     }
 
